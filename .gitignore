@@ -1,0 +1,10 @@
+# binari compilati (file senza estensione accanto ai .cpp)
+*
+!*/
+!*.cpp
+!*.h
+!*.hpp
+!*.txt
+!*.md
+!.vscode/
+!.gitignore
