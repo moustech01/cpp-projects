@@ -1,0 +1,1 @@
+### Somma dei numeri in base 2
