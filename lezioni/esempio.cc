@@ -46,7 +46,7 @@ cin >> secondi;
 int o, min,sec;
 o = secondi / 3600;
 min = (secondi % 3600) / 60; 
-sec =min % 60;
+sec =secondi% 60;
 
 cout << "ore: " << o << " minuti: " << min << " secondi: " << sec << endl;
 
