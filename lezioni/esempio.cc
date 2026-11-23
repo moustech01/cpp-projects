@@ -40,7 +40,7 @@ dout = dout*valido   + '?'*(1-valido);
 cout << din << "->" << dout << endl;*/
 
 // altro esercizio
-int secondi;
+/* int secondi;
 cout << "Inserisci i secondi da mezzanotte ";
 cin >> secondi;
 int o, min,sec;
@@ -48,7 +48,17 @@ o = secondi / 3600;
 min = (secondi % 3600) / 60; 
 sec =secondi% 60;
 
-cout << "ore: " << o << " minuti: " << min << " secondi: " << sec << endl;
+cout << "ore: " << o << " minuti: " << min << " secondi: " << sec << endl; */
+
+cout << "Inserisci 3 caratteri" << endl;
+char  chars [3];
+chars[0]=cin.get();
+chars[1]=cin.get();
+chars[2]=cin.get();
+
+cout <<chars[0]<<chars[1] << chars[2]<< endl;
+
+
 
     return 0;
 }
