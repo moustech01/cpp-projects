@@ -7,7 +7,7 @@ int main() {
   char chars[4]; // 3 caratteri + '\0'
 
   // se prima hai usato cin >> ..., scarta il resto della riga
-  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+ // cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
   for (int i = 0; i < 3; i++) {
     int c = cin.get(); // int, non char
