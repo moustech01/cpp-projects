@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 using namespace std;
 #include <limits>
 
@@ -141,14 +142,89 @@ int main() {
 
   // Leggi una lettera minuscola e stampa la successiva, con 'z' che torna ad
   // 'a'. Usa %. c → d, z → a
-  char lettera = 0;
-  cout << "Inserisci una lettera minuscola: ";
-  cin >> lettera;
-  if (lettera >= 'a' && lettera <= 'z') {
-    char lettera_successiva = (lettera - 'a' + 1) % 26 + 'a';
-    cout << " " << lettera_successiva << endl;
-  } else {
-    cerr << "Input invalido" << endl;
+  /*   char lettera = 0;
+    cout << "Inserisci una lettera minuscola: ";
+    cin >> lettera;
+    if (lettera >= 'a' && lettera <= 'z') {
+      char lettera_successiva = (lettera - 'a' + 1) % 26 + 'a';
+      cout << " " << lettera_successiva << endl;
+    } else {
+      cerr << "Input invalido" << endl;
+    } */
+
+  // Scrivi su carta cosa stampa ogni riga, poi esegui e confronta. Per ogni
+  // riga sbagliata, scrivi in una frase il perché
+  /*  cout << 'a' + 1 << endl;              // 98
+    cout << (char)('0' + 5) << endl;      // 5
+    cout << 7 / 2 * 2.0 << endl;          // 6.0
+    cout << 7 / 2.0 * 2 << endl;          // 7
+    cout << -7 % 3 << endl;               // -1
+    cout << (3 < 2 < 1) << endl;          // 1
+    cout << 'A' + 'B' << endl;            // 131 of ascii table
+    cout << true + true << endl;          // 2
+    double d = 1 / 3;
+    cout << d << endl;                    // 0
+    int k = 9.99;
+    cout << k << endl;                    // 9
+    bool b = -5;
+    cout << b << endl;                    //  1
+    int x = 5;
+    int y = x++;
+    int z = ++x;
+    cout << x << " " << y << " " << z << endl;   // 7 - 5 - 7
+    char c = 'a' + 25;
+    cout << c << endl;                    // z
+    cout << 10 / 3 * 3 + 10 % 3 << endl;  // 10
+    cout << ('z' - 'a') << endl;   //  25 */
+
+  // Leggi un intero e stampa il carattere P se è pari, D se è dispari, usando
+  // lo schema A * cond + B * (1 - cond). Deve funzionare anche con i negativi.
+
+  /* int num=0;
+  cout << "Insersci un numero: ";
+  cin >> num;
+  char esito='P'*(num%2==0)+(num%2!=0)*'D';
+  cout << esito << endl; */
+
+  // Leggi un intero e stampane il valore assoluto, senza if.
+  /* int num=0;
+    cout << "Insersci un numero: ";
+    cin >> num;
+  int val_abs=((num<0)*-1)*num+(num>=0)*num;
+    cout << val_abs << endl; */
+
+  // Questo programma compila ma ha tre errori semantici. Trovali tutti, spiega
+  // cosa stampa con input 17 18 e m, e correggilo.
+  /*   int a, b;
+    double media;
+    cout << "Due voti: ";
+    cin >> a >> b;
+    media = (a + b) / 2; // si perde precisione perché si sta facendo divisione
+                         // fra interi per calcolare una media; correzione (a +
+    b) / 2.0 char c; cout << "Iniziale (minuscola): "; cin >> c; cout <<
+    "Maiuscola: " << c - 32 << endl; // stampa un numero, correzione
+    (char)(c-32) if (media = 18) // = assegna, l'operatore di confronto è ==
+      cout << "Esattamente 18" << endl;
+    cout << "Media: " << media << endl; */
+
+  /* Leggi tre voti interi (da 0 a 30). Stampa:
+  • la media con la virgola;
+  • quanti voti sono sufficienti (≥ 18), senza if: sfrutta il fatto che un
+  confronto vale 0 o 1; • la percentuale di voti sufficienti, con la virgola. */
+
+  /* int voto_1=0, voto_2=0, voto_3=0;
+  cout << "Inserisci 3 voti:  "<< endl;
+  cin >> voto_1;
+  cin >> voto_2;
+  cin >> voto_3;
+  if(voto_1 >=18 && voto_1<=30 && voto_2 >=18 && voto_2<=30 && voto_3 >=18 &&
+  voto_3<=30){ int somma=voto_1+voto_2+voto_3; double media=somma/3.0; int
+  contatore=(voto_1>=18)+(voto_2>=18)+(voto_3>=18); double
+  percent=((contatore*1.0)/3)*100; cout << "Media: " << media << endl; cout <<
+  "Sufficienti: " << contatore << endl; cout << "Percentuale sufficienti: " <<
+  percent << endl; }else { cerr << "Range non valido";
   }
+   */
+
   return 0;
 }
